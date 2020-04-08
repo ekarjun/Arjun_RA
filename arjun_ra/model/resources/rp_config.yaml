@@ -1,0 +1,70 @@
+# The "id" is used to uniquely identify the RP implementation. The RP uses the
+# identifier to identify itself when communicating with bpocore. A UUID or
+# fully qualified URN is recommended.
+id: "urn:ciena:bp:ra:arjun_ra"
+
+# The organization which maintains the RP. This is included when the RP is
+# registered against bpocore. A URL is recommended.
+vendor: "http://ciena.com"
+
+# The vendor's license for the RP. This is included when the RP is registered
+# against bpocore. A URL is recommended.
+license: "http://ciena.com/license"
+
+# Contact information for the maintainer/owner of the RP implementation. This
+# is included when the RP is registered against bpocore.
+contacts:
+    - name: "Ciena Engineer"
+      email: "ciena.engineer@email.com"
+
+# Maximum of 32 characters. Used for presentation purposes when a human
+# readable name is required.
+title: "Arjun_RA"
+
+# Used for presentation purposes when a long form human readable description
+# of the RP is required.
+description: ""
+
+# The "version" should follow semantic versioning. Currently ignored.
+version: "0.0.1"
+
+# Location where RP specific definitions are stored. E.g, type definitions, UI
+# schema, etc. This value can be absolute or relative to this file however it
+# must be resolvable when deployed. If this value is null then no definitions
+# will be onboarded.
+definitions: "./definitions"
+
+# Locacation where the UI schema files for the resource types and the domains are stored
+# The UI schema files for resource types should be stored in the base directory of the specified
+# location, while the UI schema files for the domains should be stored in the "domain-types"
+# subdirectory of the location.
+# This value can be absolute or relative to this file however it
+# must be resolvable when deployed. If this value is null then no UI schema
+# will be onboarded.
+ui_schema: "./ui-schema"
+ddui_schema: "./ddui-schema"
+
+# Domain definitions specify the types of domains supported by this RP.
+# Developers must define their own domains.
+# See the dtkdist repo's rpsdk docs (https://git.blueplanet.com/DevOpsToolkit/dtkdist/tree/master/docs) for more details.
+# The RP should support at least one domain type.
+domains:
+  - id: "urn:ciena:bp:domain:arjun_ra"
+    title: "arjun_ra"             # max 32 chars
+    domain_settings:
+      connection_status: true
+    description: ""
+    properties: []
+    resource_types: []
+    
+# Relationship definitions specify how relationships between resources managed
+# by this RP are formed.
+# See the dtkdist repo's rpsdk docs (https://git.blueplanet.com/DevOpsToolkit/dtkdist/tree/master/docs) for more details.
+# relationships:
+#   - targetTypeId: "REPLACE ME"                           # resource types involved in relationship
+#     sourceTypeId: "REPLACE ME"
+#     capabilityName: "REPLACE ME"                         # identifies endpoint names in relationship
+#     requirementName: "REPLACE ME"
+#     relationshipTypeId: "REPLACE ME"                     # identifies type of relationship
+#     fieldKind: "REPLACE ME"                              # identicates what the field represents. one of ["provider", "user"]
+#     fieldLocator: "REPLACE ME"                           # the field in the resource properties identifying the far end

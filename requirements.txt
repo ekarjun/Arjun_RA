@@ -1,0 +1,12 @@
+# once you are satisfied with the initial state of the RA, you
+# should run `dtk-invoke requirements` to "pin" the installed libraries
+# and their versions
+
+nose
+mock
+coverage
+flake8
+ipdb
+bpfrelease
+gdfpm
+dtk-invoke

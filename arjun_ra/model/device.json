@@ -1,0 +1,9 @@
+{
+    "DEMO-A-1": {
+        "family": "Demo-A",
+        "dir": ".",
+        "version": [
+            "0.0.0.0"
+        ]
+    }
+}

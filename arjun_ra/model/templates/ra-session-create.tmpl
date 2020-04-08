@@ -1,0 +1,22 @@
+{
+    "authentication": {
+        "cli": {
+            #TODO: fill in the missing cli authentication parameters
+        },
+        "snmp": {
+            #TODO: fill in the missing snmp authentication parameters
+        }
+    },
+    "connection": {
+        "hostname": "{{ hostname }}",
+        "cli": {
+            "hostport": {{ hostport|int or 22 }}
+        },
+        "snmp": {
+            "hostport": {{ hostport|int or 161 }}
+        }
+        #TODO: check if your endpoint(s) are missing any connection parameters
+    },
+    "description": "{{ description }}",
+    "typeGroup": "/typeGroups/Demo"
+}

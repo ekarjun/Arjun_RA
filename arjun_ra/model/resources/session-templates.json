@@ -1,0 +1,5 @@
+{
+    "urn:ciena:bp:domain:arjun_ra": {
+        "template": "ra-session-create.tmpl"
+    }
+}
